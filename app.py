@@ -18,7 +18,7 @@ def get_data():
 
 def git_repo():
     st.caption(
-        "Scource Code: [link](https://github.com/akin-aroge/bc-child-care-facilities)"
+        "Scource Code: [link](https://github.com/akin-aroge/bc-child-protection-report)"
     )
 
 def data_sorce_link():
@@ -42,7 +42,7 @@ def sec_synopsis():
 
 def main():
 
-    st.sidebar.title("What would you like to do?:")
+    st.sidebar.title("Filters")
     st.title("BC MCFD CHILD PROTECTION SERVICES REPORT")
     sec_synopsis()
     sec_links_caption()
