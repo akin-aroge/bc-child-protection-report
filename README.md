@@ -38,6 +38,3 @@ make install && make run
 
 ## References
 1.	https://mcfd.gov.bc.ca/reporting/services/child-protection (accessed: 2023-11-19)
-
-
-
