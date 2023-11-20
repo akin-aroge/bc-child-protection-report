@@ -87,7 +87,7 @@ def plot_reports_flow(df_reports:pd.DataFrame, df_care:pd.DataFrame, SDA=None, p
     if pop=='Total':
         pop_seg = "Total"
 
-    title_text = f"Child Protection Reports (SDA:{SDA_text}, Population Segment:{pop_seg})"
+    title_text = f"Child Protection Reports (SDA: {SDA_text}, Population Segment: {pop_seg})"
 
     fig.update_layout(title_text=title_text, font_size=20)
     # fig.show()
@@ -105,7 +105,7 @@ def plot_reports_by_caller(df_caller:pd.DataFrame, show_percentage=False):
     df.sort_values(by=y_col_name, inplace=True, ascending=False)
     fig = px.bar(df, y=y_col_name, x=x_col_name, text_auto='.2',
                 #  text=['{:.2}'.format(val) for val in df[y_col_name].values],
-            title="Protection Reports by Caller (ALL SDAs)", color_discrete_sequence=['blue'],
+            title="Protection Reports by Caller (All SDAs and populations)", color_discrete_sequence=['blue'],
             template=TEMPLATE)
     fig.update_layout(height=600)
     st.plotly_chart(fig)

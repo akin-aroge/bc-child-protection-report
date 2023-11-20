@@ -1,6 +1,7 @@
 from src import utils
 from src import processing as p
 from src.dashboard import viz
+from src.dashboard import stories
 import pandas as pd
 import streamlit as st
 
@@ -18,6 +19,9 @@ def sec_reports_flow(df_reports, df_care, SDA, population=None):
 
     viz.plot_reports_flow(df_reports=df_reports, df_care=df_care, SDA=SDA, pop=population)
 
+    with st.expander("See remarks"):
+        st.write(stories.ON_CHILD_PROTECTION_REPORTS)
+
 def sec_sda_filter(df_reports:pd.DataFrame, sdc_col_name:str):
 
     def get_sda_col_names(df_reports, sda_col_name):
@@ -29,7 +33,7 @@ def sec_sda_filter(df_reports:pd.DataFrame, sdc_col_name:str):
     select_sda = st.sidebar.selectbox(
         "select SDA:",
         options=sda_s,
-        index=0
+        index=13
     )
     return select_sda
 
